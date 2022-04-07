@@ -52,10 +52,10 @@ public class UITests {
 		driver.get("http://localhost:8080/auth/signin");
 		driver.manage().window().setSize(new Dimension(1382, 744));
 		driver.findElement(By.id("login")).click();
-		driver.findElement(By.id("login")).sendKeys("william");
+		driver.findElement(By.id("login")).sendKeys("admin");
 		driver.findElement(By.cssSelector(".content")).click();
 		driver.findElement(By.id("password")).click();
-		driver.findElement(By.id("password")).sendKeys("123");
+		driver.findElement(By.id("password")).sendKeys("anvesh247");
 		driver.findElement(By.cssSelector(".content")).click();
 		driver.findElement(By.cssSelector(".btn:nth-child(3)")).click();
 		driver.findElement(By.cssSelector(".container:nth-child(1)")).click();
