@@ -18,6 +18,10 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
+                <sonar.organization>devopspractice247</sonar.organization>
+                <sonar.host.url>http://localhost:9000</sonar.host.url>
+                <sonar.login>admin</sonar.login>
+                <sonar.password>anvesh247</sonar.password>
 	</properties>
 
 	<dependencies>
@@ -94,14 +98,7 @@
 	</dependencies>
 
 	<build>
-		<testResources>
-			<testResource>
-				<directory>src/test/resources</directory>
-				<includes>
-					<include>**/*.*</include>
-				</includes>
-			</testResource>
-		</testResources>
+		
 		<plugins>
 			<!-- Coverage -->
 			<plugin>
@@ -153,6 +150,9 @@
 				<artifactId>maven-deploy-plugin</artifactId>
 				<version>2.8.2</version>
 			</plugin>
+                         
+    
+
 			<plugin>
 			    <groupId>org.apache.maven.plugins</groupId>
 			    <artifactId>maven-dependency-plugin</artifactId>
@@ -175,4 +175,18 @@
 			</plugin>
 		</plugins>
 	</build>
+	<distributionManagement>
+
+<snapshotRepository>
+	<id>nexus</id>
+	<name>nforum snapshot nexux repository</name>
+	<url>http://localhost:8081/repository/nforum-snapshot/</url>
+</snapshotRepository>
+
+<repository>
+	<id>nexus</id>
+	<name>nforum release nexus repository</name>
+	<url>http://localhost:8081/repository/nforum-release/</url>
+</repository>
+</distributionManagement>
 </project>
